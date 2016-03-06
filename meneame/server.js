@@ -21,19 +21,9 @@ function getMeneame() {
       });
     }
 
-    //fs.stat('output.json', function (err, stats) {
-    //  if (err) throw err;
-    //
-    //  if (stats.isFile()) {
-    //    fs.unlink('output.json');
-    //  }
-
-      fs.writeFile('output.json', JSON.stringify(json, null, 4), function (err) {
-        console.log('File successfully written! - Check your project directory for the output.json file');
-      });
-
-    //});
-
+    fs.writeFile('output.json', JSON.stringify(json, null, 4), function (err) {
+      console.log('File successfully written! - Check your project directory for the output.json file');
+    });
 
   });
 
